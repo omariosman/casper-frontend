@@ -1,0 +1,22 @@
+<div class="container">
+    <form *ngIf="!isSubmitted" class="form-body" [formGroup]="form" id="form-body-id">
+  
+        <!-- Username -->
+        <p class = "label-above-text-box">Enter your public address</p>
+        <div >
+            <input class="my-input" placeholder="Your public address" formControlName="publicAddress" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+        </div>
+  
+  
+      </form>
+    
+    
+      <button class="send-button" (click)="onSubmit()">
+        <div *ngIf="isSubmitted; else elseBlock">SUBMITTED!</div>
+        <ng-template #elseBlock>SUBMIT</ng-template>
+      </button>
+    
+    <div class="submission_recorded">
+      <p *ngIf="isSubmitted" class="btn btn-primary">Thank you.</p>
+    </div>
+</div>
