@@ -9,6 +9,20 @@
     margin-bottom: 50px;
 }
 
+.form-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.button-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
 .main-form {
     text-align: center;
     border: 10px double black;

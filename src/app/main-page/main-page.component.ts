@@ -10,7 +10,7 @@ import { FormInterface } from './form-interface';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
+  value : string = 'Recycling Team Casper Network';
   isSubmitted: boolean;
   isValid: boolean;
   clickedSend: boolean;
