@@ -1,10 +1,17 @@
 <div class="container">
-    <form *ngIf="!isSubmitted" class="form-body" [formGroup]="form" id="form-body-id">
+  <h2 class="main-heading">Welcome to the Recycling dApp</h2>
+    <form *ngIf="!isSubmitted" class="form-body main-form" [formGroup]="form" id="form-body-id">
   
-        <!-- Username -->
+        <!-- QR code -->
+        <p class = "label-above-text-box">Enter the QR code</p>
+        <div >
+            <input class="my-input" placeholder="QR code" formControlName="qrCode" maxlength="30" style="font-weight: bold; background-color: transparent !important;">
+        </div>
+    
+        <!-- Public Address -->
         <p class = "label-above-text-box">Enter your public address</p>
         <div >
-            <input class="my-input" placeholder="Your public address" formControlName="publicAddress" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+            <input class="my-input" placeholder="Your public address" formControlName="publicAddress" maxlength="30" style="font-weight: bold; background-color: transparent !important;">
         </div>
   
   

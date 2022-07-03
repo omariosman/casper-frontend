@@ -1,0 +1,40 @@
+.main-heading {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    background: #EEE;
+    padding: 20px;
+    width: 40rem;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.main-form {
+    text-align: center;
+    border: 10px double black;
+    padding: 30px;
+    width: 40rem;
+    font-size: 20px;
+}
+
+.my-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.send-button {
+    background: #527ff7;
+    color: white;
+    padding: 20px;
+    width: 15rem;
+    margin: 10px;
+    border: none;
+}
+
+.send-button:hover {
+    cursor: pointer;
+}
+
+

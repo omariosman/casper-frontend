@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SendDataService {
-  send_address_API = ""; 
+  send_address_API = "http://localhost:8000/api/send_address/"; 
 
   constructor(private http: HttpClient) { }
 
 
-  sendAddress(address: any): Observable<FormInterface>{
-    return this.http.post<FormInterface>(this.send_address_API, {'address': address});
+  sendAddress(address: any, qrCode: any): Observable<FormInterface>{
+    return this.http.post<FormInterface>(this.send_address_API, {'publicAddress': address, 'qrCode': qrCode});
   }
 
 

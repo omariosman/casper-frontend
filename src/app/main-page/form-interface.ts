@@ -1,3 +1,4 @@
 export interface FormInterface {
-    publicAddress: ""
+    publicAddress: "",
+    qrCode: ""
 }

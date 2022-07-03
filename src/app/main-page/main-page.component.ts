@@ -19,6 +19,7 @@ export class MainPageComponent implements OnInit {
 
   form = new FormGroup({
     publicAddress: new FormControl('', Validators.required),
+    qrCode: new FormControl('', Validators.required),
 
   });
 
@@ -51,37 +52,23 @@ export class MainPageComponent implements OnInit {
 
   
   recordResult() {
-    console.log("tst", this.submission);
-    this.ser.sendAddress(this.submission).subscribe(data => {
+    console.log("test", this.submission);
+    this.ser.sendAddress(this.submission.publicAddress,this.submission.qrCode).subscribe(data => {
       this.form.reset();
       this.isSubmitted = true;
-      //document.getElementById('form-body-id').setAttribute('style','display:none');
-
 
       setTimeout(() => {
         this.isSubmitted = false;
-        //document.getElementById('form-body-id').setAttribute('style','display:block');
       }, 2000);
     });
   }
 
   formResultRow() {
     this.submission.publicAddress = this.form.get('publicAddress')?.value;
+    this.submission.qrCode = this.form.get('qrCode')?.value;
 
   } 
 
-  onOptionsSelected(value:string){
-    console.log("the selected value is " + value);
-    //this.submission.gender = "";
-    this.gender_val = value;
-    
-/*
-    this.mainSer.get_club_info({"club_name": value}).subscribe(data => {
-      this.club_info = data;
-      console.log(this.club_info);
-    })
-    */
-}
 
 
 }
